@@ -109,11 +109,16 @@ header {
     line-height: normal;
 }
 .hero-text h3 {
-    color: var(--red);
-    font-size: 4.4rem;
-    font-family: 'Roboto Condensed', sans-serif;
-    line-height: normal;
-    margin-bottom: 2.5rem;
+    font-weight: 900;
+    font-size: 60px;
+    text-transform: uppercase;
+    font-style: italic;
+    background-image: -webkit-linear-gradient(90deg, #d8912f, #fcc545, #fce596);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: left;
+    font-family: Gotham Narrow, sans-serif;
+    padding: 1rem;
 }
 .hero-text p {
 font-style: normal;
@@ -198,6 +203,7 @@ margin-bottom: 2.5rem;
 }
 .steps-content h3{
     font-size: 19px;
+    text-transform: uppercase;
 }
 .steplink:hover .stepicon {
     -webkit-transform: rotate(360deg) scale(1.1);
@@ -259,18 +265,25 @@ footer {
 }
 
 @media screen and (max-width:900px) {
-    .hero {
-        padding: 10rem 5rem 5rem 5rem;
-    }
+  
     .hero-text h1 {
         font-size: 90px;
+        text-align: center;
     }
-    
-  }  
-  @media screen and (max-width:700px) {
     .hero {
         background-image: url(./img/mobile.png);
+        padding: 10rem 5rem 5rem 5rem;
     }
+    .hero-btn {
+        justify-content: center;
+    }
+    .hero-text h3 {
+        font-size: 30px;
+        text-align: center;
+    }
+  }  
+  @media screen and (max-width:700px) {
+    
     .footer-wrapper {
         width: 80%;
     }
@@ -284,14 +297,12 @@ footer {
     }
     .hero-text h1 {
         font-size: 70px;
-        text-align: center;
     }
-    .hero-btn {
-        justify-content: center;
-    }
+    
     .steps-content {
         background-color: #0f191be0;
     }
+    
   }
   @media screen and (max-width:500px) {
     #rules-text .show-more {
