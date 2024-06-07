@@ -3,6 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <!-- Google Tag Manager -->
+      <script>
+        (function (w, d, s, l, i) {
+          w[l] = w[l] || [];
+          w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+          var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != "dataLayer" ? "&l=" + l : "";
+          j.async = true;
+          j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+          f.parentNode.insertBefore(j, f);
+        })(window, document, "script", "dataLayer", "GTM-TZK4Z93");
+      </script>
+      <!-- End Google Tag Manager -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
@@ -34,14 +48,24 @@
     />
   </head>
   <body>
+      <!-- Google Tag Manager (noscript) -->
+      <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-TZK4Z93"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <header>
       <div class="logo">
         <img src="./img/logomb.png" alt="logo" />
       </div>
       <div class="btnLng">
         <div class="btn">
-          <a href="#">REGISTER</a>
-          <a href="#">LOGIN</a>
+          <a class="join-now" href="#">REGISTER</a>
+          <a class="home" href="#">LOGIN</a>
         </div>
         
       </div>
@@ -59,7 +83,7 @@
             aktuelne promocije!!
           </p> -->
           <div class="hero-btn">
-            <a href="#">REGISTER NOW</a>
+            <a class="join-now" href="#">REGISTER NOW</a>
             
           </div>
         
@@ -131,9 +155,27 @@
         </div>
       </div>
     </footer>
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script>
+      var pathArray = document.URL.split("/");
+      var secondLevelLocation = pathArray[5];
+      var newURL =
+        "https://meridianbet.com.cy/en/registration" + secondLevelLocation;
+      var homeURL =
+        "https://meridianbet.com.cy/en/betting" + secondLevelLocation;
+      console.log(newURL);
+      console.log(homeURL);
 
-    <script src="main.js"></script>
+      var ENurl =
+        "https://meridianbet.com.cy/promo/freebet" + secondLevelLocation;
+      var ELurl =
+        "https://meridianbet.com.cy/promo/freebet/el" + secondLevelLocation;
+
+      $(".join-now").attr("href", newURL);
+      $(".home").attr("href", homeURL);
+
+      $(".lang-en").attr("href", ENurl);
+      $(".lang-el").attr("href", ELurl);
+    </script>
   </body>
 </html>
